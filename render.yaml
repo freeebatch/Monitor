@@ -4,9 +4,6 @@ services:
     env: python
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python monitor.py"
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.9
 
   - type: web
     name: website-dashboard
@@ -15,6 +12,3 @@ services:
     startCommand: "python dashboard.py"
     plan: free
     autoDeploy: true
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.9
